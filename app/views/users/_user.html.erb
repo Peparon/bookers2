@@ -1,0 +1,30 @@
+
+  <!--<div class="row">-->
+  <!--  <div class="col-md-3">-->
+      <table class="table">
+        <h2>User info</h2>
+        <thead>
+          <tr>
+            <%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg"%>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>name</th>
+            <th><%= user.name %></th>
+          </tr>
+          <tr>
+            <th>Introduction</th>
+            <th><%= user.introduction %></th>
+          </tr>
+        </tbody>
+      </table>
+      <!--<div class="row">-->
+        <th colspan="2">
+          <%= link_to edit_user_path(user.id), class:"btn btn-outline-secondary btn-block " do %>
+            <i class="fas fa-user-cog fa-w-20"></i>
+          <% end %>
+        </th>
+      <!--</div>-->
+  <!--  </div>-->
+  <!--</div>-->
